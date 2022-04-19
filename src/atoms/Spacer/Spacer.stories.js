@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 import { Text } from 'react-native'
-import { Separator } from './Separator'
+import { Spacer } from './Spacer'
 
 export default {
   title: 'Spacer',
