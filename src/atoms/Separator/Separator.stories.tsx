@@ -1,23 +1,23 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { Spacer } from '../src/atoms/Spacer'
+import { Spacer } from '../Spacer'
 import { Text } from 'react-native'
-import { Separator } from '../src/atoms/Separator'
+import { Separator } from './Separator'
 
 export default {
-  title: 'Separator..',
+  title: 'Separator..2',
 }
 
 export const separator = () => (
   <>
     <Spacer m={1} />
-    <Text>lalala</Text>
+    <Text>lalala 2</Text>
     <Separator />
-    <Text>lalala</Text>
-    <Text>lalala</Text>
+    <Text>lalala 2</Text>
+    <Text>lalala 2</Text>
     <Separator />
   </>
 )
 
 // On-Device Register
-storiesOf('Separator', module).add('Separator', separator)
+storiesOf('Separator 2', module).add('Separator 2', separator)
