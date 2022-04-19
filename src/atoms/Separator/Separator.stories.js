@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { Spacer } from '../Spacer'
 import { Text } from 'react-native'
 import { Separator } from './Separator'
 
@@ -10,8 +9,7 @@ export default {
 
 export const separator = () => (
   <>
-    <Spacer m={1} />
-    <Text>lalala 2</Text>
+    <Text>separatorseparatorseparatorseparator 2</Text>
     <Separator />
     <Text>lalala 2</Text>
     <Text>lalala 2</Text>
