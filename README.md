@@ -4,9 +4,11 @@ SEPARATOR works. The other things are half broken.
 
 ## Run the project
 
-yarn install
+`yarn install`
 
-yarn start
+`yarn start`
+
+temporarily remove `index.ts` from route (but don't forget to add it back)
 
 ## Publish to npm
 
