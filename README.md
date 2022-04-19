@@ -34,6 +34,10 @@ yarn start
 For starters atoms, and preferably the most important ones like
 Spacer, Button, Text and Input.
 
+✔️ Separator
+✔️ Spacer
+✔️ Spinner / Error: "ThemeContext is not defined"
+
 # Storybook Example
 
 <p>

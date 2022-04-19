@@ -9,7 +9,7 @@ export default {
 
 export const spacer = () => (
   <>
-    <Text>separatorseparatorseparatorseparator 2</Text>
+    <Text>Spacer</Text>
     <Spacer />
     <Text>lalala 2</Text>
     <Text>lalala 2</Text>
