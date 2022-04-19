@@ -4,10 +4,10 @@ import { Text } from 'react-native'
 import { Separator } from './Separator'
 
 export default {
-  title: 'Separator..2',
+  title: 'Spacer',
 }
 
-export const separator = () => (
+export const spacer = () => (
   <>
     <Text>separatorseparatorseparatorseparator 2</Text>
     <Separator />
@@ -18,4 +18,4 @@ export const separator = () => (
 )
 
 // On-Device Register
-storiesOf('Separator 2', module).add('Separator 2', separator)
+storiesOf('Spacer', module).add('Spacer', spacer)
