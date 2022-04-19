@@ -21,6 +21,11 @@ import {Separator} from 'open-palette'
 
 - publish
 
+## TODO
+
+- Fix Text
+- Fix Spinner
+
 ## Publish to npm
 
 yarn login

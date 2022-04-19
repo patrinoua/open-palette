@@ -1,22 +1,23 @@
-import { NoUndefined } from "app/utils/types"
-import { TextStyle } from "react-native"
-import { TextProps } from "."
-import { useTheme, isThemeV3 } from "../../Theme"
+import { TextStyle } from 'react-native'
+import { TextProps } from '.'
+import { useTheme, isThemeV3 } from '../../Theme'
+
+export type NoUndefined<T> = T extends undefined ? never : T
 
 export const useFontFamilyFor = ({
   italic,
   weight,
 }: {
-  italic: TextProps["italic"]
-  weight: TextProps["weight"]
+  italic: TextProps['italic']
+  weight: TextProps['weight']
 }) => {
   const { theme } = useTheme()
   if (!isThemeV3(theme)) {
-    return "no-font"
+    return 'no-font'
   }
   const { fonts } = theme
 
-  if (italic && weight === "medium") {
+  if (italic && weight === 'medium') {
     return fonts.sans.mediumItalic
   }
 
@@ -24,7 +25,7 @@ export const useFontFamilyFor = ({
     return fonts.sans.italic
   }
 
-  if (weight === "medium") {
+  if (weight === 'medium') {
     return fonts.sans.medium
   }
 
@@ -37,7 +38,7 @@ export const useFontFamilyFor = ({
  * This is to make a `Text` behave correctly when it needs to be combined with others to make a UI component.
  * Don't use this function when some actual text needs to be displayed. Only use it when text needs to be part of a UI component.
  */
-export const useTextStyleForPalette = (variant: NoUndefined<TextProps["variant"]>): TextStyle => {
+export const useTextStyleForPalette = (variant: NoUndefined<TextProps['variant']>): TextStyle => {
   const { theme } = useTheme()
 
   const fontSizeAndLineHeight = theme.textTreatments[variant].fontSize
