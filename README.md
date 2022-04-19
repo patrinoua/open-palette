@@ -2,6 +2,24 @@ SEPARATOR works. The other things are half broken.
 
 ---
 
+---
+
+---
+
+## Publish to npm
+
+yarn login
+yarn publish
+yarn start
+
+---
+
+## How to use
+
+```
+import {Separator} from 'open-palette'
+```
+
 # Storybook Example
 
 <p>
@@ -128,4 +146,5 @@ Storybook with Expo CLI
 
 - [Storybook React](https://storybook.js.org/docs/react/get-started/introduction)
 - [Storybook React Native](https://storybook.js.org/docs/guides/guide-react-native/)
+
 # open-palette
