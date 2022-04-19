@@ -9,9 +9,10 @@ export default {
 
 export const separator = () => (
   <>
-    <Text>separatorseparatorseparatorseparator 2</Text>
+    <Text>lalala 1</Text>
     <Separator />
     <Text>lalala 2</Text>
+    <Separator />
     <Text>lalala 2</Text>
     <Separator />
   </>
