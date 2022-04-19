@@ -18,4 +18,4 @@ export const spacer = () => (
 )
 
 // On-Device Register
-storiesOf('Spacer', module).add('Spacer', spacer)
+storiesOf('Space Elements', module).add('Spacer', spacer)

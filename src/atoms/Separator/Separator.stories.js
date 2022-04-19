@@ -4,7 +4,7 @@ import { Text } from 'react-native'
 import { Separator } from './Separator'
 
 export default {
-  title: 'Separator..2',
+  title: 'Separator',
 }
 
 export const separator = () => (
@@ -19,4 +19,4 @@ export const separator = () => (
 )
 
 // On-Device Register
-storiesOf('Separator 2', module).add('Separator 2', separator)
+storiesOf('Space Elements', module).add('Separator', separator)

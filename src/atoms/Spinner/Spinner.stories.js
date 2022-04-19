@@ -22,4 +22,4 @@ export const spinner = () => (
 )
 
 // On-Device Register
-storiesOf('Spacer', module).add('Spinner', spinner)
+storiesOf('Loading', module).add('Spinner', spinner)
