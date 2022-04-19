@@ -10,6 +10,17 @@ SEPARATOR works. The other things are half broken.
 
 temporarily remove `index.ts` from route (but don't forget to add it back)
 
+## How to use
+
+```
+import {Separator} from 'open-palette'
+```
+
+- Add your component
+- Import their stories on '/stories/index'
+
+- publish
+
 ## Publish to npm
 
 yarn login
@@ -17,12 +28,6 @@ yarn publish
 yarn start
 
 ---
-
-## How to use
-
-```
-import {Separator} from 'open-palette'
-```
 
 ## What we want to add here
 
