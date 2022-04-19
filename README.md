@@ -2,10 +2,6 @@ SEPARATOR works. The other things are half broken.
 
 ---
 
----
-
----
-
 ## Publish to npm
 
 yarn login
@@ -19,6 +15,11 @@ yarn start
 ```
 import {Separator} from 'open-palette'
 ```
+
+## What we want to add here
+
+For starters atoms, and preferably the most important ones like
+Button, Text and Input.
 
 # Storybook Example
 
