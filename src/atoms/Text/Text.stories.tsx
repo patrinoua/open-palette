@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/react-native"
-import { Box} from "../Box"
-import {  Flex } from "../Flex"
+import { Box } from "../Box"
+import { Flex } from "../Flex"
 import React from "react"
 import { Platform, Text as RNText, TextStyle, View } from "react-native"
 import { withTheme } from "../../storybook/decorators"
