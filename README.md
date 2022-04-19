@@ -1,3 +1,7 @@
+SEPARATOR works. The other things are half broken.
+
+---
+
 # Storybook Example
 
 <p>
@@ -15,7 +19,7 @@ You can use Storybook to test and share your component library quickly and easil
 
 ## Running with Storybook CLI
 
-![expo web with storybook-cli](https://i.imgur.com/0x0Ecmp.png "expo web with storybook-cli")
+![expo web with storybook-cli](https://i.imgur.com/0x0Ecmp.png 'expo web with storybook-cli')
 
 > web only
 
@@ -28,12 +32,12 @@ This method runs your Expo components in a Storybook-React environment. This is 
 - Create a [custom webpack config](./.storybook/webpack.config.js) `touch .storybook/webpack.config.js`
 
   ```js
-  const { resolve } = require("path");
-  const { withUnimodules } = require("@expo/webpack-config/addons");
+  const { resolve } = require('path')
+  const { withUnimodules } = require('@expo/webpack-config/addons')
 
   module.exports = ({ config }) => {
-    return withUnimodules(config, { projectRoot: resolve(__dirname, "../") });
-  };
+    return withUnimodules(config, { projectRoot: resolve(__dirname, '../') })
+  }
   ```
 
 - Run `yarn build-storybook` to try it out!
@@ -70,15 +74,15 @@ This project can be used for iOS, Android, and web! You may find that it's bette
 - In your `App.tsx` or `App.js`
 
 ```ts
-import { configure, getStorybookUI } from "@storybook/react-native";
+import { configure, getStorybookUI } from '@storybook/react-native'
 
 configure(() => {
   // Since require.context doesn't exist in metro bundler world, we have to
   // manually import files ending in *.stories.js
-  require("./stories");
-}, module);
+  require('./stories')
+}, module)
 
-export default getStorybookUI();
+export default getStorybookUI()
 ```
 
 - Create a file for importing all of the stories ([`stories/index.js`](./stories/index.js)):
@@ -88,7 +92,7 @@ export default getStorybookUI();
 
   ```js
   // stories/index.js
-  import "./1-Button.stories";
+  import './1-Button.stories'
   ```
 
 - Register your stories for React Native:
@@ -124,3 +128,4 @@ Storybook with Expo CLI
 
 - [Storybook React](https://storybook.js.org/docs/react/get-started/introduction)
 - [Storybook React Native](https://storybook.js.org/docs/guides/guide-react-native/)
+# open-palette
