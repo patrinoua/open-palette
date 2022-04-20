@@ -1,5 +1,4 @@
 import { themeGet } from "@styled-system/theme-get"
-import { MeasuredView } from "../../utils/MeasuredView"
 import { EventEmitter } from "events"
 import _ from "lodash"
 import { Color, EyeOpenedIcon, Flex, Spinner, Text, useTheme, XCircleIcon } from "palette"
@@ -15,8 +14,9 @@ import {
   View,
 } from "react-native"
 import styled from "styled-components/native"
-import { EyeClosedIcon } from "../../svgs/EyeClosedIcon"
+import { EyeClosedIcon } from "palette/svgs/EyeClosedIcon"
 import { InputTitle } from "./InputTitle"
+// import { MeasuredView } from "app/utils/MeasuredView"
 
 const DEFAULT_FONT_SIZE = 16
 export const INPUT_HEIGHT = 50
@@ -149,7 +149,7 @@ export const Input = React.forwardRef<TextInput, InputProps>(
         return
       }
       return (
-        <Flex pr="1" justifyContent="center" flexGrow={0}>
+        <Flex pr='1' justifyContent='center' flexGrow={0}>
           <TouchableOpacity
             onPress={() => {
               setShowPassword(!showPassword)
@@ -157,7 +157,7 @@ export const Input = React.forwardRef<TextInput, InputProps>(
             accessibilityLabel={showPassword ? "hide password button" : "show password button"}
             hitSlop={{ bottom: 40, right: 40, left: 0, top: 40 }}
           >
-            {!showPassword ? <EyeClosedIcon fill="black30" /> : <EyeOpenedIcon fill="black60" />}
+            {!showPassword ? <EyeClosedIcon fill='black30' /> : <EyeOpenedIcon fill='black60' />}
           </TouchableOpacity>
         </Flex>
       )
@@ -174,30 +174,30 @@ export const Input = React.forwardRef<TextInput, InputProps>(
       Platform.OS === "android" && _.isArray(placeholder) ? (
         <>
           {placeholder.map((placeholderString, index) => (
-            <MeasuredView
-              key={`${index}`}
-              setMeasuredState={({ width }) =>
-                setPlaceholderWidths((widths) => {
-                  widths[index] = width
-                  return widths
-                })
-              }
+            // <MeasuredView
+            //   key={`${index}`}
+            //   setMeasuredState={({ width }) =>
+            //     setPlaceholderWidths((widths) => {
+            //       widths[index] = width
+            //       return widths
+            //     })
+            //   }
+            // >
+            <Text
+              numberOfLines={1}
+              style={{
+                borderColor: "red",
+                borderWidth: 1,
+                flex: 1,
+                fontFamily,
+                fontSize: 15,
+                textAlign: "left",
+                ...inputTextStyle,
+              }}
             >
-              <Text
-                numberOfLines={1}
-                style={{
-                  borderColor: "red",
-                  borderWidth: 1,
-                  flex: 1,
-                  fontFamily,
-                  fontSize: 15,
-                  textAlign: "left",
-                  ...inputTextStyle,
-                }}
-              >
-                {placeholderString}
-              </Text>
-            </MeasuredView>
+              {placeholderString}
+            </Text>
+            // </MeasuredView>
           ))}
         </>
       ) : null
@@ -231,19 +231,19 @@ export const Input = React.forwardRef<TextInput, InputProps>(
 
     return (
       <Flex flexGrow={1} style={containerStyle}>
-        <Flex flexDirection="row" alignItems="center">
+        <Flex flexDirection='row' alignItems='center'>
           <InputTitle optional={optional} required={required}>
             {title}
           </InputTitle>
           {!!maxLength && !!showLimit && (
-            <Text color="black60" variant="xs" marginLeft="auto">
+            <Text color='black60' variant='xs' marginLeft='auto'>
               {maxLength - value.length}
             </Text>
           )}
         </Flex>
 
         {!!description && (
-          <Text color={descriptionColor ?? "black60"} variant="xs" mb={0.5}>
+          <Text color={descriptionColor ?? "black60"} variant='xs' mb={0.5}>
             {description}
           </Text>
         )}
@@ -262,7 +262,7 @@ export const Input = React.forwardRef<TextInput, InputProps>(
           >
             {renderLeftHandSection?.()}
             {!!icon && (
-              <Flex pl="1" justifyContent="center" flexGrow={0}>
+              <Flex pl='1' justifyContent='center' flexGrow={0}>
                 {icon}
               </Flex>
             )}
@@ -313,31 +313,31 @@ export const Input = React.forwardRef<TextInput, InputProps>(
               />
             </Flex>
             {!!fixedRightPlaceholder && value === "" && (
-              <Flex pr={1} justifyContent="center" alignItems="center">
-                <Text variant="sm" color="black60">
+              <Flex pr={1} justifyContent='center' alignItems='center'>
+                <Text variant='sm' color='black60'>
                   {fixedRightPlaceholder}
                 </Text>
               </Flex>
             )}
             {renderShowPasswordIcon()}
             {loading ? (
-              <Flex pr="3" justifyContent="center" flexGrow={0}>
+              <Flex pr='3' justifyContent='center' flexGrow={0}>
                 <Spinner
-                  size="medium"
+                  size='medium'
                   style={{ marginLeft: 3, width: 15, height: 4, backgroundColor: color("black60") }}
                 />
               </Flex>
             ) : (
               !!(value !== undefined && value !== "" && enableClearButton) && (
-                <Flex pr="1" justifyContent="center" flexGrow={0}>
+                <Flex pr='1' justifyContent='center' flexGrow={0}>
                   <TouchableOpacity
                     onPress={() => {
                       localClear()
                     }}
                     hitSlop={{ bottom: 40, right: 40, left: 0, top: 40 }}
-                    accessibilityLabel="Clear input button"
+                    accessibilityLabel='Clear input button'
                   >
-                    <XCircleIcon fill="black30" />
+                    <XCircleIcon fill='black30' />
                   </TouchableOpacity>
                 </Flex>
               )
@@ -345,7 +345,7 @@ export const Input = React.forwardRef<TextInput, InputProps>(
           </View>
         </TouchableWithoutFeedback>
         {!!error && (
-          <Text color="red100" mt={1} variant="xs" testID="input-error">
+          <Text color='red100' mt={1} variant='xs' testID='input-error'>
             {error}
           </Text>
         )}

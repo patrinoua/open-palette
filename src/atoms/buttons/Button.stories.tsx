@@ -1,6 +1,6 @@
 import { action } from "@storybook/addon-actions"
 import { storiesOf } from "@storybook/react-native"
-import { Wrap } from "../../utils/Wrap"
+import { Wrap } from "../../app/utils/Wrap"
 import { Box, Flex, Spacer } from "atoms"
 import { BellIcon, LinkIcon,  } from "../../icons"
 import { useState } from "react"

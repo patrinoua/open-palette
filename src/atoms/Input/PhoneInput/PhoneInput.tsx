@@ -1,14 +1,14 @@
-import { TriangleDown } from "app/Icons/TriangleDown"
+// import { TriangleDown } from "app/Icons/TriangleDown"
 import * as glibphone from "google-libphonenumber"
 import replace from "lodash/replace"
 import { Flex, Input, InputProps, Sans, Spacer, Touchable, useColor } from "palette"
 import { useEffect, useRef, useState } from "react"
 import React from "react"
 import { Platform } from "react-native"
-import { Select, SelectOption } from "../../Select"
 import { cleanUserPhoneNumber } from "./cleanUserPhoneNumber"
 import { countries, countryIndex } from "./countries"
 import { formatPhoneNumber } from "./formatPhoneNumber"
+import { Select, SelectOption } from "palette/elements/Select"
 
 /** Underline bar height for text input on android when focused */
 const UNDERLINE_TEXTINPUT_HEIGHT_ANDROID = 1.5
@@ -130,7 +130,7 @@ export const PhoneInput = React.forwardRef<
               formatPhoneNumber({ current: newPhoneNumber, previous: phoneNumber, countryCode })
             )
           }
-          keyboardType="phone-pad"
+          keyboardType='phone-pad'
           renderLeftHandSection={() => (
             <Select<string>
               options={countryOptions}
@@ -150,24 +150,24 @@ export const PhoneInput = React.forwardRef<
                   })
                 )
               }}
-              title="Country code"
+              title='Country code'
               renderButton={({ selectedValue, onPress }) => {
                 return (
                   <Touchable onPress={onPress}>
-                    <Flex flexDirection="row" style={{ width: "100%", height: "100%" }}>
+                    <Flex flexDirection='row' style={{ width: "100%", height: "100%" }}>
                       <Flex
-                        flexDirection="row"
-                        px="1"
-                        alignItems="center"
-                        backgroundColor="black10"
+                        flexDirection='row'
+                        px='1'
+                        alignItems='center'
+                        backgroundColor='black10'
                       >
                         {/* selectedValue should always be present */}
-                        <Sans size="4">{countryIndex[selectedValue ?? countryCode].flag}</Sans>
+                        <Sans size='4'>{countryIndex[selectedValue ?? countryCode].flag}</Sans>
                         <Spacer mr={0.5} />
-                        <TriangleDown width="8" />
+                        {/* <TriangleDown width='8' /> */}
                       </Flex>
-                      <Flex justifyContent="center" pl="1">
-                        <Sans color="black60" size="3">
+                      <Flex justifyContent='center' pl='1'>
+                        <Sans color='black60' size='3'>
                           +{dialCode}
                         </Sans>
                       </Flex>
@@ -178,14 +178,14 @@ export const PhoneInput = React.forwardRef<
               // tslint:disable-next-line:no-shadowed-variable
               renderItemLabel={({ label, value }) => {
                 return (
-                  <Flex flexDirection="row" alignItems="center" flexShrink={1}>
-                    <Sans size="4">{countryIndex[value].flag}</Sans>
-                    <Spacer mr="1" />
-                    <Sans size="4" style={{ width: 45 }}>
+                  <Flex flexDirection='row' alignItems='center' flexShrink={1}>
+                    <Sans size='4'>{countryIndex[value].flag}</Sans>
+                    <Spacer mr='1' />
+                    <Sans size='4' style={{ width: 45 }}>
                       +{countryIndex[value].dialCode}
                     </Sans>
-                    <Spacer mr="1" />
-                    <Sans size="4" numberOfLines={1} ellipsizeMode="tail" style={{ flexShrink: 1 }}>
+                    <Spacer mr='1' />
+                    <Sans size='4' numberOfLines={1} ellipsizeMode='tail' style={{ flexShrink: 1 }}>
                       {label}
                     </Sans>
                   </Flex>

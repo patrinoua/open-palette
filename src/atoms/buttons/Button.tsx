@@ -1,4 +1,4 @@
-import { MeasuredView, ViewMeasurements } from "../../utils/MeasuredView"
+import { MeasuredView, ViewMeasurements } from "../../app/utils/MeasuredView"
 import { Spacer } from "../Spacer"
 import { useColor } from "../../hooks"
 import { useState } from "react"

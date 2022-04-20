@@ -1,23 +1,30 @@
 {
-    "editor.formatOnSave": true,
-    "files.trimTrailingWhitespace": true,
-    "prettier.trailingComma": "es5",
-    "prettier.semi": false,
-    "prettier.printWidth": 100,
-    "editor.rulers": [100],
-    "editor.tabSize": 2,
-    "search.exclude": {
-      "**/node_modules": true,
-      "externals/**": true,
-      "Pod/Assets/Emission.*": true,
-      ".vscode/.react/*": true
-    },
-    "typescript.tsdk": "./node_modules/typescript/lib",
-    "todohighlight.exclude": ["node_modules/**", ".vscode/**", "externals/**"],
-    "tslint.autoFixOnSave": true,
-    "typescript.format.enable": false,
-    "[json]": {
-      "editor.formatOnSave": false
-    },
-    "javascript.validate.enable": true
-  }
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": false,
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": false,
+  "editor.rulers": [
+    100
+  ],
+  "editor.tabSize": 2,
+  "search.exclude": {
+    "**/node_modules": true,
+    "externals/**": true,
+    "Pod/Assets/Emission.*": true,
+    ".vscode/.react/*": true
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "todohighlight.exclude": [
+    "node_modules/**",
+    ".vscode/**",
+    "externals/**"
+  ],
+  "tslint.autoFixOnSave": true,
+  "typescript.format.enable": false,
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "javascript.validate.enable": true
+}

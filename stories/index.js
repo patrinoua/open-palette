@@ -1,8 +1,11 @@
 // import './1-Separator.stories'
-import './2-Constants.stories'
-import './3-LinearGradient.stories'
-import './4-Font.stories'
-import '../src/atoms/Separator/Separator.stories'
-import '../src/atoms/Spacer/Spacer.stories'
-import '../src/atoms/Spinner/Spinner.stories'
-import '../src/atoms/Text/Text.stories'
+import "./2-Constants.stories"
+import "./3-LinearGradient.stories"
+import "./4-Font.stories"
+import "../src/atoms/Separator/Separator.stories"
+import "../src/atoms/Spacer/Spacer.stories"
+import "../src/atoms/Spinner/Spinner.stories"
+import "../src/atoms/Text/Text.stories"
+// import "../src/palette/elements/Avatar/Avatar.stories"
+// import "palette/elements/Banner/Banner.stories"
+// import "palette/elements/Button/Button.stories"

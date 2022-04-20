@@ -9,8 +9,8 @@
     "moduleResolution": "node",
     "noEmit": true,
     "skipLibCheck": true,
+    "baseUrl": "src/",
     "resolveJsonModule": true
   },
-  "baseUrl": "src",
   "extends": "expo/tsconfig.base"
 }

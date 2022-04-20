@@ -1,5 +1,5 @@
 import { DecoratorFunction } from "@storybook/addons"
-import { ProvideScreenDimensions } from "../utils/useScreenDimensions"
+import { ProvideScreenDimensions } from "../app/utils/useScreenDimensions"
 import { Theme } from "../Theme"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 
